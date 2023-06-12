@@ -43,13 +43,6 @@ from src.data import (
     output_modes
 )
 
-
-try:
-    from torch.utils.tensorboard import SummaryWriter
-except ImportError:
-    from tensorboardX import SummaryWriter
-
-
 logger = logging.getLogger(__name__)
 
 def train(args, train_dataset, model, tokenizer):

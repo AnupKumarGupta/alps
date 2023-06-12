@@ -43,7 +43,7 @@ def convert_examples_to_features(
     labels = [label_from_example(example) for example in examples]
 
     batch_encoding = tokenizer.batch_encode_plus(
-        [(example.text_a, example.text_b) for example in examples],
+        [(example.text_a) for example in examples],
         max_length=max_length, pad_to_max_length=True, return_token_type_ids=True
     )
 
